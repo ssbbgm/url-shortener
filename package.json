@@ -1,0 +1,28 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssbbgm/url-shortener.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssbbgm/url-shortener/issues"
+  },
+  "homepage": "https://github.com/ssbbgm/url-shortener#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
