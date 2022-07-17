@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-// const shortId = require('shortid');
+// const shortid = require('shortid');
 const shortUrlGenerator = require('../utils/urlGenerator');
 
 
@@ -11,7 +11,7 @@ const shortUrlSchema = new Schema({
     short: {
         type: String,
         required: true,
-        default: shortUrlGenerator()
+        default: shortUrlGenerator
     },
     clicks: {
         type: Number,

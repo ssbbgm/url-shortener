@@ -25,15 +25,15 @@ module.exports = {
     //create new url
     createUrl (req, res) {
         ShortUrl.create(req.body)
-        .then((dbShortUrlData) => res.json(dbShortUrlData))
-        .then(res.redirect('/'))
-        .catch((err) => res.status(500).json(err));
+        .then((dbShortUrlData) => res.redirect('/'))
+        // .then(res.redirect('/'))
+        // .catch((err) => res.status(500).json(err));
     },
 
     //delete a url and associated data
     deleteUrl (req, res) {
         ShortUrl.findOneAndDelete({ _id: req.params._id })
-        .then(() => res.json({ message: 'Url has been deleted deleted!' }))
+        .then(() => res.json({ message: 'Url has been deleted!' }))
         .catch((err) => res.status(500).json(err));
     },
 };
