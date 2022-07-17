@@ -1,7 +1,7 @@
 const shortId = require('shortid');
 
-const shortUrlGenerator = ()  => {
-    return `https://${shortId.generate()}`
-}
+const shortUrlGenerator = () => {
+    return `${shortId.generate()}`;
+};
 
 module.exports = shortUrlGenerator;

@@ -28,7 +28,7 @@
                 <th>Full URL</th>
                 <th>Short URL</th>
                 <th>Clicks</th>
-                <th>Copy</th>
+                <!-- <th>Copy</th> -->
                 <th>Delete</th>
             </tr>
         </thead>
@@ -36,15 +36,18 @@
             <% shortUrls.forEach(shortUrl => { %>
             <tr>
                 <td><a href="<%= shortUrl.full %>" target="_blank"><%= shortUrl.full %></a></td>
-                <td><a href="<%= shortUrl.short %>" target="_blank"><%= shortUrl.short %></a></td>
+                <td><a href="/shorten/<%= shortUrl.short %>" target="_blank">
+                    <%= shortUrl.short %>
+                </a></td>
                 <td><%= shortUrl.clicks %></td>
-                <td><button type="button" class="btn btn-primary" class="copy">Copy</button></td>
-                <td><button type="button" class="btn btn-danger" class="delete">Delete</button></td>
+                <!-- <td><button type="button" class="btn btn-primary" class="copy">Copy</button></td> -->
+                <!-- <td><a href="/delete/:shortUrl" class="btn btn-danger" class="delete">Delete</a></td> -->
+                <!-- <td><form action="/delete/:shortUrl"></form></td> -->
             </tr>
             <% }) %>
         </tbody>
     </table>
 </div>
-<!-- <script src="../button.js"></script> -->
+<!-- <script src="../public/button.js"></script> -->
 </body>
 </html>

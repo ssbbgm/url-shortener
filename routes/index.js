@@ -25,7 +25,7 @@ router.route('/').get(getUrls).post(createUrl);
 //    res.redirect('/')
 // });
 
-router.route('/:shortUrl').get(getSingleUrl);
+router.route("/shorten/:shortUrl").get(getSingleUrl);
 // router.get('/:shortUrl', async (req, res) => {
 //    const shortUrl = await ShortUrl.findOne({ short: req.params.shortUrl })
 //    if (shortUrl == null) res.sendStatus(404)

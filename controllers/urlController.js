@@ -12,14 +12,14 @@ module.exports = {
     },
 
     //get a single url to add to click count
-    getSingleUrl (req, res) {
+    getSingleUrl(req, res) {
         ShortUrl.findOneAndUpdate(
-            { shortUrl: req.params.short },
-            { $inc : {'clicks' : 1 }},
-            { new: true }
+          { short: req.params.shortUrl },
+          { $inc: { clicks: 1 } },
+          { new: true }
         )
-        // .then(res.redirect( 'req.params.full' ))
-        .catch((err) => res.status(500).json(err));
+          .then((data) => res.redirect(data.full))
+          .catch((err) => res.status(500).json(err));
     },
 
     //create new url
