@@ -18,7 +18,7 @@ module.exports = {
             { $inc : {'clicks' : 1 }},
             { new: true }
         )
-        .then(res.redirect(ShortUrl.full))
+        // .then(res.redirect( 'req.params.full' ))
         .catch((err) => res.status(500).json(err));
     },
 
