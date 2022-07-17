@@ -35,6 +35,6 @@ router.route('/:shortUrl').get(getSingleUrl);
 //    res.redirect(shortUrl.full)
 // });
 
-router.route('/delete/:shortUrl').get(deleteUrl);
+router.route('/delete/:shortUrl').delete(deleteUrl);
 
 module.exports = router;
