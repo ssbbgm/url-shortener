@@ -40,14 +40,12 @@
                     <%= shortUrl.short %>
                 </a></td>
                 <td><%= shortUrl.clicks %></td>
-                <!-- <td><button type="button" class="btn btn-primary" class="copy">Copy</button></td> -->
-                <!-- <td><a href="/delete/:shortUrl" class="btn btn-danger" class="delete">Delete</a></td> -->
-                <!-- <td><form action="/delete/:shortUrl"></form></td> -->
+                <td><button url="<%= shortUrl.short %>" class="btn btn-danger delete">Delete</button></td>
             </tr>
             <% }) %>
         </tbody>
     </table>
 </div>
-<!-- <script src="../public/button.js"></script> -->
+<script src="/button.js"></script>
 </body>
 </html>

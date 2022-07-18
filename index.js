@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.static('public'));
 app.use(routes);
 
 db.once('open', () => {
@@ -16,12 +17,3 @@ db.once('open', () => {
       console.log(`API server running on port ${PORT}!`);
     });
 });
-  
-
-
-// app.delete('/delete/:_id', async (req, res) => {
-//     const deleteId = await shortUrl.findOneAndDelete({ _id: ObjectId(req.body._id) })
-//     res.redirect('/')
-// })
-
-// app.listen(process.env.PORT || 3000);

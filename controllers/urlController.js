@@ -7,7 +7,6 @@ module.exports = {
     getUrls (req, res) {
         ShortUrl.find()
         .then((shortUrls) => res.render('index', { shortUrls: shortUrls}))
-        // .then((shortUrls) => res.json(shortUrls))
         .catch((err) => res.status(500).json(err))
     },
 
@@ -26,13 +25,11 @@ module.exports = {
     createUrl (req, res) {
         ShortUrl.create(req.body)
         .then((dbShortUrlData) => res.redirect('/'))
-        // .then(res.redirect('/'))
-        // .catch((err) => res.status(500).json(err));
     },
 
     //delete a url and associated data
     deleteUrl (req, res) {
-        ShortUrl.findOneAndDelete({ _id: req.params._id })
+        ShortUrl.findOneAndDelete({ shortUrl: req.short })
         .then(() => res.json({ message: 'Url has been deleted!' }))
         .catch((err) => res.status(500).json(err));
     },
