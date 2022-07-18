@@ -3,7 +3,7 @@ const express = require('express');
 const db = require('./config/connection');
 const routes = require('./routes');
 
-const PORT = 3000 || process.env.MONGODB_URL;
+const PORT = 3000 || process.env.PORT;
 const app = express();
 
 app.set('view engine', 'ejs');
