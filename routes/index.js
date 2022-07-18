@@ -9,7 +9,7 @@ const {
 router.route('/').get(getUrls).post(createUrl);
 
 
-router.route("/shorten/:shortUrl").get(getSingleUrl);
+router.route('/shorten/:shortUrl').get(getSingleUrl);
 
 
 router.route('/delete/:shortUrl').delete(deleteUrl);
