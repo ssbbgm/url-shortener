@@ -21,6 +21,7 @@
 This project allows the user to shorten any URL and count how many times a link has been used.
 
 ## Deployed Link
+https://url-shortener-ssb.herokuapp.com/
 
 ## Installation
 None.
