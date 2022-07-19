@@ -1,7 +1,8 @@
 const { connect, connection } = require('mongoose');
 // const mongoose = require('mongoose');
 
-const MONGODB_URI = 'mongodb://localhost/urlShortner' || process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/urlShortner';
+
 
 connect(MONGODB_URI, {
     useNewUrlParser: true,
